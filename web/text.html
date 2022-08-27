@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>ScanWallet</title>
+            <script src="eel.js"></script>
+        </head>
+        <body>
+            <form>
+                <label id="ad">введите адресс</label>
+                <input type="text" id="get_input" value />
+                <button onclick="msg()" type="button">Отправить</button>
+            </form>
+            <div>
+                <label id="img"></image>
+            </div>
+            <script type="text/javascript">
+                async function msg(){
+                    var wallet = document.getElementById('get_input').value;
+                    let result = await eel.get_address(wallet)();
+                    let img = document.querySelector('#img').innerHTML = result;
+                }
+
+            </script>
+        </body>
+    </html>
